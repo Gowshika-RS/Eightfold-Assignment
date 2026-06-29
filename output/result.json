@@ -1,0 +1,78 @@
+{
+    "candidate_id": "cd24300c-f259-4606-9735-f8a61eaf8609",
+    "full_name": "John Doe",
+    "emails": [
+        "john@gmail.com"
+    ],
+    "phones": [
+        "+919876543210"
+    ],
+    "headline": "Software Engineer",
+    "skills": [
+        "C++",
+        "Machine Learning",
+        "Python"
+    ],
+    "experience": [
+        {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start": "2022-01",
+            "end": null,
+            "summary": "Backend Developer"
+        }
+    ],
+    "education": [
+        {
+            "institution": "Anna University",
+            "degree": "B.Tech",
+            "field": "Computer Science",
+            "end_year": 2026
+        }
+    ],
+    "overall_confidence": 0.91,
+    "provenance": [
+        {
+            "field": "full_name",
+            "source": "recruiter_csv",
+            "transformation": "raw",
+            "confidence": 1.0
+        },
+        {
+            "field": "emails",
+            "source": "recruiter_csv",
+            "transformation": "normalized",
+            "confidence": 1.0
+        },
+        {
+            "field": "phones",
+            "source": "recruiter_csv",
+            "transformation": "normalized",
+            "confidence": 1.0
+        },
+        {
+            "field": "headline",
+            "source": "recruiter_csv",
+            "transformation": "raw",
+            "confidence": 1.0
+        },
+        {
+            "field": "skills",
+            "source": "linkedin_json",
+            "transformation": "normalized",
+            "confidence": 0.8
+        },
+        {
+            "field": "experience",
+            "source": "linkedin_json",
+            "transformation": "raw",
+            "confidence": 0.8
+        },
+        {
+            "field": "education",
+            "source": "linkedin_json",
+            "transformation": "raw",
+            "confidence": 0.8
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "John Doe",
+  "headline": "Software Engineer at Google",
+  "location": "Bangalore, India",
+  "skills": [
+    "python",
+    "cpp",
+    "Machine Learning"
+  ],
+  "experience": [
+    {
+      "company": "Google",
+      "title": "Software Engineer",
+      "start": "2022-01",
+      "end": null,
+      "summary": "Backend Developer"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Anna University",
+      "degree": "B.Tech",
+      "field": "Computer Science",
+      "end_year": 2026
+    }
+  ]
+}

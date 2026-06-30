@@ -1,15 +1,17 @@
 {
-    "candidate_id": "cd24300c-f259-4606-9735-f8a61eaf8609",
+    "candidate_id": "127017bc-37c5-4f58-a4b4-7c65d646b650",
     "full_name": "John Doe",
     "emails": [
-        "john@gmail.com"
+        "john.doe@gmail.com"
     ],
     "phones": [
         "+919876543210"
     ],
     "headline": "Software Engineer",
     "skills": [
+        "Sql",
         "C++",
+        "Docker",
         "Machine Learning",
         "Python"
     ],
@@ -19,14 +21,14 @@
             "title": "Software Engineer",
             "start": "2022-01",
             "end": null,
-            "summary": "Backend Developer"
+            "summary": "Developed scalable backend services."
         }
     ],
     "education": [
         {
             "institution": "Anna University",
             "degree": "B.Tech",
-            "field": "Computer Science",
+            "field": "Computer Science and Engineering",
             "end_year": 2026
         }
     ],

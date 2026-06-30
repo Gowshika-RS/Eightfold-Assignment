@@ -2,3 +2,5 @@ pandas
 phonenumbers
 python-dateutil
 pytest
+Flask
+Flask-CORS

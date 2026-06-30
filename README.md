@@ -1,173 +1,83 @@
 # Candidate Profile Transformer
 
-**Eightfold Engineering Internship Assignment**
-
-A full-stack application that transforms candidate information from multiple data sources into a unified canonical profile. The application reads recruiter CSV and LinkedIn JSON files, normalizes the data, resolves conflicts, validates the output, calculates confidence scores, tracks provenance, and presents the results through a modern React-based web interface.
-
----
+This project is my solution for the Eightfold Engineering Internship Assignment. It transforms candidate information from multiple sources (Recruiter CSV and LinkedIn JSON) into a single canonical profile by normalizing, merging, validating, and tracking data provenance with confidence scores.
 
 ## Features
 
-### Backend
-- Reads candidate information from:
-  - Recruiter CSV
-  - LinkedIn JSON
-- Normalizes:
-  - Email addresses
-  - Phone numbers (E.164 format)
-  - Skills
-  - Dates
-- Merges candidate profiles into a canonical structure.
-- Configurable conflict resolution using `config/config.json`.
-- Calculates field-level and overall confidence scores.
-- Tracks provenance (source, transformation, confidence) for every field.
-- Schema validation before generating output.
-- Comprehensive logging and exception handling.
-- Unit tests using Pytest.
+- Reads Recruiter CSV and LinkedIn JSON
+- Normalizes emails, phone numbers, and skills
+- Merges candidate data with configurable conflict resolution
+- Calculates confidence scores
+- Tracks provenance for each field
+- Validates output schema
+- React frontend with Flask backend
+- Downloads generated JSON profile
 
-### Frontend
-- Modern React + Vite user interface.
-- Upload Recruiter CSV.
-- Upload LinkedIn JSON.
-- Generate Candidate Profile.
-- Displays:
-  - Candidate Information
-  - Skills
-  - Experience
-  - Education
-  - Confidence Score
-  - Provenance
-  - Raw JSON Output
-- Download generated JSON profile.
-- Responsive and user-friendly interface.
+## Prerequisites
 
----
+- Python 3.10+
+- Node.js 18+
+- npm
 
-## Tech Stack
+## How to Run
 
-### Backend
-- Python 3
-- Flask
-
-### Frontend
-- React
-- Vite
-- CSS
-
-### Testing
-- Pytest
-
----
-
-## Project Structure
-
-```
-Eightfold-Assignment/
-│
-├── frontend/                 # React frontend
-│
-├── config/
-│   └── config.json
-│
-├── input/
-│   ├── recruiter.csv
-│   └── linkedin.json
-│
-├── merger/
-│   └── merge.py
-│
-├── normalizers/
-│   ├── email_normalizer.py
-│   ├── phone_normalizer.py
-│   ├── skill_normalizer.py
-│   └── date_normalizer.py
-│
-├── readers/
-│   ├── csv_reader.py
-│   └── linkedin_reader.py
-│
-├── validator/
-│   └── validator.py
-│
-├── output/
-│   └── result.json
-│
-├── tests/
-│   └── test_merge.py
-│
-├── app.py
-├── main.py
-├── requirements.txt
-├── README.md
-└── DESIGN.md
-```
-
----
-
-## Installation
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Gowshika-RS/Eightfold-Assignment.git
 cd Eightfold-Assignment
 ```
 
----
-
-### 2. Install Backend Dependencies
+### 2. Install backend dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
----
-
-### 3. Install Frontend Dependencies
+### 3. Install frontend dependencies
 
 ```bash
 cd frontend
 npm install
+cd ..
 ```
 
----
-
-## Running the Application
-
-### Start the Flask Backend
+### 4. Start the backend
 
 ```bash
 python app.py
 ```
 
-Backend runs at:
+Backend:
 
 ```
 http://127.0.0.1:5000
 ```
 
----
+### 5. Start the frontend
 
-### Start the React Frontend
-
-Open a new terminal.
+Open another terminal.
 
 ```bash
 cd frontend
 npm run dev
 ```
 
-Frontend runs at:
+Frontend:
 
 ```
 http://localhost:5173
 ```
 
----
+### 6. Using the application
 
-## Running the Backend Pipeline
+1. Upload **recruiter.csv**
+2. Upload **linkedin.json**
+3. Click **Generate Candidate Profile**
+4. View the generated profile
+5. Download the generated JSON
 
-To generate the canonical candidate profile directly:
+## Run the Backend Pipeline
 
 ```bash
 python main.py
@@ -179,81 +89,33 @@ Generated output:
 output/result.json
 ```
 
----
-
-## Running Tests
+## Run Tests
 
 ```bash
 python -m pytest tests/
 ```
 
----
-
-## Sample Input Files
-
-Use the sample files located in:
+## Sample Input
 
 ```
 input/recruiter.csv
 input/linkedin.json
 ```
 
----
-
 ## Output
 
-The generated candidate profile contains:
+The generated candidate profile includes:
 
 - Candidate ID
 - Full Name
-- Email
-- Phone
+- Emails
+- Phone Numbers
 - Headline
 - Skills
 - Experience
 - Education
-- Overall Confidence Score
-- Provenance Metadata
+- Overall Confidence
+- Provenance
 
 ---
-
-## Design Highlights
-
-- Clean Architecture
-- Modular Components
-- Configurable Merge Strategy
-- Dynamic Conflict Resolution
-- Data Normalization
-- Confidence Scoring
-- Provenance Tracking
-- Schema Validation
-- React-Based User Interface
-- Comprehensive Logging
-- Unit Testing
-
----
-
-## Future Improvements
-
-- Support additional candidate sources (Resume PDF, GitHub, etc.)
-- Authentication and user management
-- Database integration
-- REST API documentation (Swagger/OpenAPI)
-- Bulk candidate processing
-- Docker deployment
-- Cloud deployment (AWS/Azure/GCP)
-
----
-
-## Author
-
-**Gowshika R. S.**
-
-Final Year  
-Computer Science and Engineering
-
----
-
-## License
-
-This project was developed as part of the **Eightfold Engineering Internship Assignment**.
+Developed by **Gowshika R. S.**
